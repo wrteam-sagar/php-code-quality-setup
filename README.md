@@ -118,44 +118,54 @@ After running the script:
 
 ## Usage
 
-### Using PHP_CodeSniffer
+### PHP_CodeSniffer
 
-Check code for coding standard violations:
+PHP_CodeSniffer detects violations of coding standards in your PHP code. It checks your code against predefined rules (like PSR-12) and reports any violations.
+
+**Example:**
 
 ```bash
-phpcs /path/to/your/php/file.php
+phpcs app/Models/User.php
 ```
 
-### Using PHP-CS-Fixer
+### PHP-CS-Fixer
 
-Fix coding standard violations automatically:
+PHP-CS-Fixer automatically fixes coding standard violations in your PHP code. It can format your code according to PSR-12 or other coding standards without manual intervention.
+
+**Example:**
 
 ```bash
-php-cs-fixer fix /path/to/your/php/file.php
+php-cs-fixer fix app/Controllers/HomeController.php
 ```
 
-### Using PHPStan
+### PHPStan
 
-Run static analysis:
+PHPStan performs static analysis on your PHP code to find bugs before they reach production. It analyzes your code without running it and detects type errors, undefined variables, and other potential issues.
+
+**Example:**
 
 ```bash
-phpstan analyse /path/to/your/php/directory
+phpstan analyse app/
 ```
 
-### Using PHPMD
+### PHPMD
 
-Detect code mess:
+PHPMD (PHP Mess Detector) finds potential problems in your code such as unused code, overly complex methods, or naming issues. It helps maintain clean and maintainable code.
+
+**Example:**
 
 ```bash
-phpmd /path/to/your/php/file.php text codesize,unusedcode,naming
+phpmd app/Models/Product.php text codesize,unusedcode,naming
 ```
 
-### Using Laravel Pint
+### Laravel Pint
 
-Format Laravel code:
+Laravel Pint is Laravel's opinionated PHP code style fixer built on PHP-CS-Fixer. It automatically formats your Laravel project code according to Laravel's coding standards.
+
+**Example:**
 
 ```bash
-pint /path/to/your/laravel/project
+pint app/
 ```
 
 ## Troubleshooting
