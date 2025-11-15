@@ -250,16 +250,7 @@ fi
 # -------------------
 echo ""
 echo "Installing Global PHP Developer Tools..."
-composer global require \
-    squizlabs/php_codesniffer \
-    friendsofphp/php-cs-fixer \
-    phpstan/phpstan \
-    laravel/pint \
-    phpmd/phpmd \
-    larastan/larastan \
-
-# Laravel IDE Helper (installed per-project, but we make available globally)
-composer global require barryvdh/laravel-ide-helper
+composer global require squizlabs/php_codesniffer friendsofphp/php-cs-fixer phpstan/phpstan laravel/pint phpmd/phpmd larastan/larastan
 
 # Ensure PATH contains composer global bin
 SHELL_RC="$HOME/.bashrc"
