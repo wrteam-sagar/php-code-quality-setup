@@ -8,6 +8,8 @@ This script automatically installs and configures essential PHP code quality too
 
 ### Step 1: Run the Setup Script
 
+**Note:** This setup requires the `run.sh` file. Make sure to download it first.
+
 1. Make the script executable:
 
    ```bash
