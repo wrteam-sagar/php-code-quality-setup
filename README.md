@@ -30,7 +30,7 @@ Since Cursor's extension marketplace doesn't list the PHPMD extension, you need 
 
 1. Open Cursor
 2. Open the Extensions menu from the sidebar (or press `Cmd+Shift+X` / `Ctrl+Shift+X`)
-3. Drag and drop the `ecodes.vscode-phpmd-1.3.0.vsix` file into the Extensions view
+3. Drag and drop the [`ecodes.vscode-phpmd-1.3.0.vsix`](./ecodes.vscode-phpmd-1.3.0.vsix) file into the Extensions view
 4. The extension will be installed automatically
 
 **Note:** This is a one-time setup. After installation, the extension will be available for all your projects.
