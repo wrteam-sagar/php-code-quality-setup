@@ -82,4 +82,4 @@ If the tools are not found, make sure:
 
 1. You've completed the one-time setup
 2. Your terminal PATH includes Composer's global bin directory
-<!-- 3. You've restarted your terminal after the one-time setup -->
+3. You've restarted your terminal after the one-time setup
