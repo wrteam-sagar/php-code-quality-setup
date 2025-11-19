@@ -85,7 +85,7 @@ VENDOR_BIN="./vendor/bin"
 # 1) Laravel Pint
 printf "${color_regular_green}→ Step 1: Laravel Pint (Auto Formatting)${color_reset}\n"
 printf "${color_regular_blue}Command:${color_reset} $VENDOR_BIN/pint --parallel\n"
-$VENDOR_BIN/pint --preset psr12 --parallel
+$VENDOR_BIN/pint --config pint.json
 printf "\n"
 
 # 2) PHP CS Fixer
