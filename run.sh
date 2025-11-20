@@ -188,7 +188,7 @@ apply_settings() {
     "php-cs-fixer.autoFixBySemicolon": false,
     "php-cs-fixer.formatHtml": false,
     "php-cs-fixer.documentFormattingProvider": true,
-    "php-cs-fixer.ignorePHPVersion": true,
+    "php-cs-fixer.ignorePHPVersion": false,
     "phpmd.verbose": true,
     "phpmd.command": "phpmd",
     "phpstan.checkValidity": true,
