@@ -23,7 +23,9 @@
     <!-- ===========================
          1. CODE SIZE RULES
          =========================== -->
-    <rule ref="rulesets/cleancode.xml" />
+    <rule ref="rulesets/cleancode.xml" >
+        <exclude name="StaticAccess" />
+    </rule>
     <rule ref="rulesets/codesize.xml">
         <!-- Laravel controllers often get complex; set higher thresholds -->
         <exclude name="CyclomaticComplexity" />
@@ -89,5 +91,4 @@
     <exclude-pattern>config/.*</exclude-pattern>
     <exclude-pattern>public/.*</exclude-pattern>
     <exclude-pattern>resources/.*</exclude-pattern>
-
 </ruleset>
