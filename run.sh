@@ -191,6 +191,7 @@ apply_settings() {
     "php-cs-fixer.ignorePHPVersion": false,
     "phpmd.verbose": true,
     "phpmd.command": "phpmd",
+    "phpmd.rules": "phpmd.xml",
     "phpstan.checkValidity": true,
     "phpstan.showProgress": true,
     "diffEditor.ignoreTrimWhitespace": false,
