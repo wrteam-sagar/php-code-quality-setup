@@ -91,4 +91,5 @@
     <exclude-pattern>config/.*</exclude-pattern>
     <exclude-pattern>public/.*</exclude-pattern>
     <exclude-pattern>resources/.*</exclude-pattern>
+    <exclude-pattern>_ide_helper.*</exclude-pattern>
 </ruleset>
