@@ -27,7 +27,7 @@ return (new PhpCsFixer\Config())
 
         // Style rules
         'array_syntax' => ['syntax' => 'short'],
-        'single_quote' => true,
+        'single_quote' => false,
         'no_unused_imports' => true,
         'ordered_imports' => ['sort_algorithm' => 'alpha'],
 
