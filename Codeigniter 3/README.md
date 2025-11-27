@@ -47,8 +47,22 @@ That's it! Your pre-commit hooks are now configured. Every time you commit code,
 When you commit code, the pre-commit hook will:
 
 - Run PHP CS Fixer to check code formatting
+
+```
+php-cs-fixer fix
+```
+
 - Run PHPMD to detect code mess and potential issues
+
+```
+phpmd application text phpmd.xml
+```
+
 - Run PHPStan for static analysis
+
+```
+./vendor/bin/phpstan analyse --memory-limit=1G --error-format=table
+```
 
 If any of these checks fail, the commit will be blocked until the issues are resolved.
 
