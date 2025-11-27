@@ -34,6 +34,7 @@ Since Cursor's extension marketplace doesn't list the PHPMD extension, you need 
 4. The extension will be installed automatically
 
 **Note:** This is a one-time setup. After installation, the extension will be available for all your projects.
+S
 
 ---
 
@@ -45,7 +46,7 @@ Pre-commit hooks need to be configured for each project. The setup varies by fra
 
 #### [Laravel](./Laravel/README.md)
 
-#### CodeIgniter 3 (Coming soon)
+#### [CodeIgniter 3](./Codeigniter%203/README.md)
 
 #### CodeIgniter 4 (Coming soon)
 
