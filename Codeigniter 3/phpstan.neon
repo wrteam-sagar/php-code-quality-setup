@@ -2,3 +2,10 @@ parameters:
     paths:
         - application/
     level: 5  # Level 9 is the most strict
+    bootstrapFiles: 
+        - phpstan-bootstrap.php
+        - ci-stubs.php
+    excludePaths:
+    - application/views/**/
+    - application/cache/*
+    - application/logs/*
