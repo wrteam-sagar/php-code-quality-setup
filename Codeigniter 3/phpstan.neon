@@ -1,0 +1,4 @@
+parameters:
+    paths:
+        - application/
+    level: 5  # Level 9 is the most strict

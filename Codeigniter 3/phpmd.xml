@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<ruleset name="Laravel Ruleset"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+         https://pmd.sourceforge.io/ruleset_xml_schema.xsd"
+         xmlns:fn="http://www.w3.org/2005/xpath-functions">
+
+    <description>
+        Custom PHPMD rules for Laravel applications.
+        This avoids noise from Eloquent, Facades, magic methods, and container binding,
+        while enforcing maintainable and clean code.
+    </description>
+
+    <!--
+        Recommended rule categories:
+        - Clean code
+        - Maintainability
+        - Naming consistency
+        - Avoid super-complex controllers/services
+    -->
+
+    <!-- ===========================
+         1. CODE SIZE RULES
+         =========================== -->
+    <rule ref="rulesets/cleancode.xml" >
+        <exclude name="StaticAccess" />
+    </rule>
+    <rule ref="rulesets/codesize.xml">
+        <!-- Laravel controllers often get complex; set higher thresholds -->
+        <exclude name="CyclomaticComplexity" />
+        <exclude name="NPathComplexity" />
+
+        <!-- Allow bigger controllers/services than plain PHP -->
+        <exclude name="ExcessiveClassComplexity" />
+    </rule>
+
+    <!-- ===========================
+         2. DESIGN RULES
+         =========================== -->
+    <rule ref="rulesets/design.xml">
+        <!-- Laravel's magic and container triggers many false positives -->
+        <exclude name="CouplingBetweenObjects" />
+        <exclude name="TooManyPublicMethods" />
+        <exclude name="TooManyFields" />
+    </rule>
+
+    <!-- ===========================
+         3. NAMING RULES
+         =========================== -->
+    <rule ref="rulesets/naming.xml">
+        <!-- Laravel uses non-standard names like $request, $user, $model -->
+        <exclude name="ShortVariable" />
+        <exclude name="ShortMethodName" />
+        <exclude name="LongVariable" />
+
+        <!-- Allow uppercase traits like Model::CREATED_AT -->
+        <exclude name="ConstantNamingConventions" />
+    </rule>
+
+    <!-- ===========================
+         4. UNUSED CODE RULES
+         =========================== -->
+    <rule ref="rulesets/unusedcode.xml">
+        <!-- Don't warn unused private methods; Laravel sometimes reflects them -->
+        <exclude name="UnusedPrivateMethod" />
+        <exclude name="UnusedLocalVariable" />
+    </rule>
+
+    <!-- ===========================
+         5. CONTROVERSIAL RULES
+         =========================== -->
+    <rule ref="rulesets/controversial.xml">
+        <!-- These rules conflict heavily with Laravel's magic -->
+        <exclude name="CamelCaseClassName" />
+        <exclude name="CamelCasePropertyName" />
+        <exclude name="CamelCaseVariableName" />
+        <exclude name="CamelCaseMethodName" />
+        <exclude name="ExitExpression" />
+    </rule>
+
+
+    <!-- ===========================
+         EXCLUDE FOLDERS (IMPORTANT)
+         =========================== -->
+    <exclude-pattern>vendor/.*</exclude-pattern>
+    <exclude-pattern>storage/.*</exclude-pattern>
+    <exclude-pattern>bootstrap/.*</exclude-pattern>
+    <exclude-pattern>node_modules/.*</exclude-pattern>
+    <exclude-pattern>database/.*</exclude-pattern>
+    <exclude-pattern>config/.*</exclude-pattern>
+    <exclude-pattern>public/.*</exclude-pattern>
+    <exclude-pattern>resources/.*</exclude-pattern>
+    <exclude-pattern>_ide_helper.*</exclude-pattern>
+</ruleset>
