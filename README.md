@@ -34,7 +34,6 @@ Since Cursor's extension marketplace doesn't list the PHPMD extension, you need 
 4. The extension will be installed automatically
 
 **Note:** This is a one-time setup. After installation, the extension will be available for all your projects.
-S
 
 ---
 
